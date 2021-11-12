@@ -1,0 +1,5 @@
+//Pull From github
+# Steps To Run mock-server
+1.install npm 
+2.cd categories
+3.npx json-server --watch db.json

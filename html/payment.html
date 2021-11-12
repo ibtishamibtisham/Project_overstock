@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #main_div {
+        height: 600px;
+        width: 800px;
+
+        margin: auto;
+      }
+      .adress {
+        width: 50%;
+        height: 350px;
+        background-color: rgb(242, 243, 243);
+        margin-bottom: 20px;
+        margin: auto;
+      }
+      .payment {
+        width: 50%;
+        height: 200px;
+        margin-top: 40px;
+        background-color: rgb(242, 243, 243);
+        margin: auto;
+      }
+      .name {
+        width: 90%;
+        height: 30px;
+        margin-left: 15px;
+      }
+      .Number {
+        width: 90%;
+        height: 30px;
+        margin-left: 15px;
+      }
+      .adress1 {
+        width: 90%;
+        height: 30px;
+        margin-left: 15px;
+      }
+      .city {
+        width: 90%;
+        height: 60px;
+        margin-left: 15px;
+        margin-bottom: 15px;
+      }
+      .btn {
+        width: 92%;
+        height: 40px;
+        margin-left: 15px;
+        background-color: #0272a2;
+        color: white;
+      }
+      .city11 {
+        height: 25px;
+      }
+      .Pincode {
+        height: 25px;
+        margin-left: 10px;
+      }
+      .atm {
+        width: 90%;
+        height: 30px;
+        margin-left: 15px;
+      }
+      .details {
+        width: 95%;
+        height: 50px;
+        margin-left: 15px;
+        margin-bottom: 15px;
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main_div">
+      <div class="adress">
+        <h2 style="text-align: center">Address</h2>
+        <label class="name_label" style="margin-left: 12px">Enter Name</label>
+        <input class="name" placeholder="Name" required /><br />
+        <label class="name_label" style="margin-left: 12px">Enter Number</label
+        ><br />
+        <input class="Number" placeholder="Mobile Number" required /><br />
+        <label class="name_label" style="margin-left: 12px"
+          >Fill your Adress</label
+        ><br />
+        <textarea class="adress1" required></textarea><br />
+        <div class="city" style="display: flex; justify-content: space-between">
+          <div class="city1">
+            <p style="margin: 0px">city</p>
+            <input class="city11" placeholder="City" />
+          </div>
+          <div class="pincode">
+            <p style="margin: 0px; margin-left: 10px">pin-code</p>
+            <input class="Pincode" placeholder="Pin Code" />
+          </div>
+        </div>
+        <button class="btn" onclick="address()">Adress Review</button>
+      </div>
+
+      <div class="payment">
+        <h2 style="text-align: center">Payment</h2>
+        <input class="atm" placeholder="Card Number" required />
+        <div class="details">
+          <div class="cvv">
+            <p style="margin: 0px">cvv</p>
+            <input
+              style="height: 25px"
+              class="cvv1"
+              placeholder="cvv"
+              required
+            />
+          </div>
+          <div class="Expiry">
+            <p style="margin: 0px; margin-left: 15px">expiry</p>
+            <input
+              style="height: 25px; margin-left: 15px"
+              class="month"
+              placeholder="mm/yy"
+              required
+            />
+          </div>
+        </div>
+        <button class="btn" type="submit" onclick="payment()">Submit</button>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  function address() {
+    let name = document.querySelector(".name").value;
+    let num = document.querySelector(".Number").value;
+    let adr = document.querySelector(".address1");
+    let city = document.querySelector(".city11").value;
+    let pc = document.querySelector(".Pincode").value;
+    // console.log(name, num, adr, city, pc);
+    //validating fields
+    if (name.length > 3 && num.length == 10 && pc.length == 6) {
+      alert("Ready for order");
+    } else {
+      alert("Fill correct Details");
+    }
+  }
+
+  function payment() {
+    let card = document.querySelector(".atm").value;
+    let cvv = document.querySelector(".cvv1").value;
+    let mon = document.querySelector(".month").value;
+    console.log(card, cvv, mon);
+    if (card.length == 16 && cvv.length == 3 && mon.length == 5) {
+      alert("Your Order Has Been Successfully Placed!!");
+      setTimeout(() => {
+        localStorage.removeItem("items_buy");
+        window.location.href = "/html/navbar.html";
+      }, 2000);
+    }
+  }
+</script>
