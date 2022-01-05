@@ -32,7 +32,7 @@ function navbar() {
           </div>
           <div class="hello">
             <img src="https://img.icons8.com/ios/25/000000/like--v1.png" />
-            <div >Lists</div>
+            <div ><a href="/html/saveLater.html">List<a/></div>
           </div>
           <div>
             <img
@@ -69,6 +69,6 @@ function navbar() {
    `;
 }
 function savelater() {
-  window.location.href = "html/saveLater.html";
+  window.location.href = "/html/saveLater.html";
 }
 export { navbar, savelater };
