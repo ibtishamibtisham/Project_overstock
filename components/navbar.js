@@ -28,7 +28,7 @@ function navbar() {
               style="margin-left: 2px"
               src="https://img.icons8.com/windows/25/000000/guest-male--v1.png"
             />
-            <div onclick="acounts_dropdown()">accounts</div>
+            <div onclick="acounts_dropdown()"><a href="/html/signup1.html">accounts</a></div>
           </div>
           <div class="hello">
             <img src="https://img.icons8.com/ios/25/000000/like--v1.png" />
@@ -38,7 +38,7 @@ function navbar() {
             <img
               src="https://img.icons8.com/external-flatart-icons-solid-flatarticons/25/000000/external-cart-supermarket-flatart-icons-solid-flatarticons.png"
             />
-            <div><a href="cart.html">Cart</a></div>
+            <div><a href="/html/cart.html">Cart</a></div>
           </div>
           <!-- <button>
             <img src="https://img.icons8.com/ios/15/000000/lock--v1.png" />Add
@@ -69,6 +69,6 @@ function navbar() {
    `;
 }
 function savelater() {
-  window.location.href = "saveLater.html";
+  window.location.href = "html/saveLater.html";
 }
 export { navbar, savelater };

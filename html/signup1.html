@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #master {
+        width: 800px;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+      }
+      .signup {
+        height: 400px;
+        width: 300px;
+        background-color: rgb(250, 241, 241);
+        margin-top: 170px;
+        margin-right: 20px;
+      }
+      .signin {
+        height: 400px;
+        width: 300px;
+        background: rgb(250, 241, 241);
+        margin-top: 170px;
+        margin-left: 20px;
+      }
+      #password_box {
+        display: flex;
+        justify-content: space-between;
+      }
+      #password {
+        width: 140px;
+        height: 30px;
+      }
+      #c_pass {
+        width: 140px;
+        height: 30px;
+      }
+      #mailme {
+        width: 97%;
+        height: 30px;
+      }
+      #pwd {
+        width: 97%;
+        height: 30px;
+      }
+      #create_account {
+        width: 98%;
+        height: 30px;
+        margin-top: 30px;
+        margin-left: 3px;
+      }
+      #email {
+        width: 97.5%;
+        height: 30px;
+      }
+      h2 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="master">
+      <div class="signup">
+        <div id="account">
+          <h2>Create Account</h2>
+          <p class="create_account1" style="text-align: center">
+            Email Address
+          </p>
+          <input id="email" placeholder="Email" />
+          <div id="password_box">
+            <div id="create_pass">
+              <p class="create_account1" style="margin-left: 5px">
+                Create Password
+              </p>
+              <input id="password" type="text" placeholder="Password" />
+            </div>
+            <div id="confir_pass">
+              <p class="create_account1" style="margin-left: 10px">
+                Confirm Password
+              </p>
+              <input id="c_pass" type="text" placeholder="Confirm Password" />
+            </div>
+          </div>
+          <p
+            class="error1"
+            style="
+              font-size: 12px;
+              color: red;
+              text-align: center;
+              margin: 1px;
+              display: none;
+            "
+          >
+            Please fill Correct data!!
+          </p>
+          <button
+            id="create_account"
+            style="
+              background-color: #0272a2;
+              border: none;
+              margin: 0px;
+              margin-top: 20px;
+              color: white;
+            "
+            onclick="postData()"
+          >
+            Create Account
+          </button>
+        </div>
+      </div>
+
+      <div class="signin">
+        <div class="inp">
+          <h2>Sign In</h2>
+          <p style="margin: 2px; text-align: center; margin-bottom: 10px">
+            Email address
+          </p>
+          <input id="mailme" type="text" placeholder="email" />
+
+          <p
+            style="
+              margin: 2px;
+              margin-top: 10px;
+              margin-bottom: 10px;
+              text-align: center;
+            "
+          >
+            Password
+          </p>
+          <input id="pwd" placeholder="pwd" />
+          <p
+            class="error"
+            style="
+              font-size: 12px;
+              color: red;
+              text-align: center;
+              margin: 0px;
+              display: none;
+            "
+          >
+            Account Does Not Exist!!
+          </p>
+          <button
+            id="create_account"
+            onclick="logindata()"
+            style="
+              background-color: #27865f;
+              border: none;
+              margin: 0px;
+              margin-top: 15px;
+              color: white;
+            "
+          >
+            Log-In
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  // localStorage.setItem("cred", JSON.stringify(arr));
+  if (localStorage.getItem("cred") === null) {
+    localStorage.setItem("cred", JSON.stringify([]));
+  }
+
+  function postData() {
+    let Email = document.getElementById("email").value;
+    let Password = document.getElementById("password").value;
+    let cpwd = document.getElementById("c_pass").value;
+
+    // let obj = { Email, Password, cpwd, flag };
+    // arr.push(obj);
+    if (Email.length > 3 && Password.length > 3 && cpwd.length > 3) {
+      var cartData = JSON.parse(localStorage.getItem("cred"));
+
+      var flag = true;
+      for (let k = 0; k < cartData.length; k++) {
+        if (Email === cartData[k].Email) {
+          flag = false;
+          break;
+        }
+      }
+
+      if (flag) {
+        cartData.push(Email);
+        alert("Successfully Signed Up");
+      }
+
+      localStorage.setItem("cred", JSON.stringify(cartData));
+    } else {
+      let p = document.querySelector(".error1");
+      p.style.display = "block";
+    }
+  }
+
+  function logindata() {
+    let flag = false;
+    let m = document.getElementById("mailme").value;
+    let items = JSON.parse(localStorage.getItem("cred"));
+    for (let i = 0; i < items.length; i++) {
+      if (items[i] == m) {
+        flag = true;
+        break;
+      } else {
+        let p = document.querySelector(".error");
+        p.style.display = "block";
+      }
+    }
+    if (flag) {
+      localStorage.setItem("valid-login", m);
+      window.location.href = "index.html";
+    }
+  }
+</script>

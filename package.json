@@ -1,0 +1,23 @@
+{
+  "name": "project_overstock",
+  "version": "1.0.0",
+  "description": "//Pull From github\r # Steps To Run mock-server\r 1.install npm \r 2.cd categories\r 3.npx json-server --watch db.json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ibtishamibtisham/Project_overstock.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ibtishamibtisham/Project_overstock/issues"
+  },
+  "homepage": "https://github.com/ibtishamibtisham/Project_overstock#readme",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}
