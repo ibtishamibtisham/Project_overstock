@@ -6,3 +6,6 @@ Tech-stack-html,css,javascript,json-server
 1.install npm 
 2.cd categories
 3.npx json-server --watch db.json
+
+deployed-link
+https://overstockclone.netlify.app/
