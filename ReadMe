@@ -1,5 +1,16 @@
-A cloned E-Commerce shopping website which  allows users to shop from diffrent categories
-Tech-stack-html,css,javascript,json-server
+# Overstock cloned E-Commerce full stack website
+
+#### Introduction
+
+This full stack project is mainly aimed to provide a facility as an E-commerce shopping website.
+this mainly targets home decors but to reach the more customers,there are few more categories have been added to it
+
+--------------------------
+## Technologies and tools
+
+**Frontend:**HTML-CSS3 and Javascript
+
+**Backend:**  Javascript,JSON-SERVER
 
 //Pull From github
 # Steps To Run mock-server
