@@ -25,7 +25,51 @@ this mainly targets home decors but to reach the more customers,there are few mo
 -  *Payment process* is secure.
 
 -  User gets discount on first time buy.
--Smooth checkout process.
+
+ -Smooth checkout process.
+ 
+ ------------------------------
+ 
+ ## System Requirements
+
+- Web Browsers : Apart from internet explorer 9, this web project will easily run in any of the system supported web browsers running on the specified operating systems.
+
+- Processor : 1.9 gigahertz (GHz) x86- or x64-bit dual core processor with SSE2 instruction set.
+
+- Memory :	2 GB RAM
+
+------------------------------
+
+
+##  Manipulation Procedure 
+
+
+- **Home Page** : User will be landed up directly to the home page there all the products are visible and multiple categories can be navigated through the categories sections**
+                 
+- **To purchase the product** : User needs to click on the product and it can be directly added o the cart.
+
+- **To do the payments** :After that,user will be asked for login or signup to the website and then users can proceed with the payments.
+
+- **Sign-up,sign-in** : Users need to sign up with the credentials and it will be stored in local to remember the users,fields are validated .
+
+- **Payment Procedure** : Once done with the loging user need to fill the adress and the payment details(Debit card) and once done user can click on  place order button and the user will be redirected to home page with an alert on the screen about the successfull placed order.
+
+There are some static pages also such as
+- Bussiness,
+- higher education,
+- Government.
+-------------------
+- Bussiness,
+- Creative ,
+- Technology.
+   
+    for giving an overview about each topic quickly. User can go through them to explore further, by the help of header of this website . 
+
+
+## Collaborators
+
+I have created this in time time span of 4 days during the construct week as an evaluation.
+
 
 //Pull From github
 # Steps To Run mock-server
