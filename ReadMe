@@ -54,16 +54,6 @@ this mainly targets home decors but to reach the more customers,there are few mo
 
 - **Payment Procedure** : Once done with the loging user need to fill the adress and the payment details(Debit card) and once done user can click on  place order button and the user will be redirected to home page with an alert on the screen about the successfull placed order.
 
-There are some static pages also such as
-- Bussiness,
-- higher education,
-- Government.
--------------------
-- Bussiness,
-- Creative ,
-- Technology.
-   
-    for giving an overview about each topic quickly. User can go through them to explore further, by the help of header of this website . 
 
 
 ## Collaborators
@@ -71,7 +61,22 @@ There are some static pages also such as
 I have created this in time time span of 4 days during the construct week as an evaluation.
 
 
-//Pull From github
+## Steps to run this project
+
+1. Firstly, you need to clone this backend_ejs folder to run and use this website.
+
+2. As we know that this project is based on ejs,mongoose and express too. So, we need all these inside our folder after having node js, for installing commands are:
+- npm init -y
+- npm i express mongoose
+- npm install ejs
+
+3. Then write command to run server file:
+- npm run server
+
+3.  After successfully installations, you have to visit signup folder simply from browser by providing this address :
+
+ - http://localhost:3838/signup
+
 # Steps To Run mock-server
 1.install npm 
 2.cd categories
