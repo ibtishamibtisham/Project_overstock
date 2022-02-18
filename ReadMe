@@ -12,6 +12,21 @@ this mainly targets home decors but to reach the more customers,there are few mo
 
 **Backend:**  Javascript,JSON-SERVER
 
+--------------------------
+
+## Features of web-project
+
+-  Complete validation, functionality in *Signup & Signin page* .
+
+-  *Home Page* displays all the categoris and offers on it.
+
+-   User can navigate to the categories and read about the products.
+
+-  *Payment process* is secure.
+
+-  User gets discount on first time buy.
+-Smooth checkout process.
+
 //Pull From github
 # Steps To Run mock-server
 1.install npm 
